@@ -1,0 +1,232 @@
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.css-nav-bg {
+    background-color: #f56262;
+}
+
+.css-nav-hover:hover {
+    text-decoration: underline;
+}
+
+.css-logo-distance {
+    margin-right: 200px;
+}
+
+/* font sizes */
+@font-face {
+    font-family: Bariol-Regular; 
+    src: url(../Fonts/Bariol_Regular.otf); 
+}
+
+@font-face {
+    font-family: Bariol-Regular-Italic; 
+    src: url(../Fonts/Bariol_Regular_Italic.otf); 
+}
+
+p, h1, h2, h3, span, div {
+    font-family: Bariol-Regular;
+}
+
+.css-italic {
+    font-family: Bariol-Regular-Italic;
+}
+
+.css-font {
+    font-size: 20px;
+    letter-spacing: 1px;
+    line-height: 24px;
+}
+
+.css-space {
+    letter-spacing: 2px;
+}
+
+.css-font-sm {
+    font-size: 16px;
+    line-height: 21px;
+    font-family: Bariol-Regular;
+}
+
+.css-title-font {
+    font-size: 40px;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+/*  */
+
+.css-carousel-bg {
+    background-color: #ec4e4d ;
+}
+
+/* Style for control elements first Carousel Component */
+.css-arrows {
+    width: 42px;
+    height: 42px;
+    position: absolute;
+    top: 50%;
+    margin-top: -31px;
+}
+
+.css-prev-item {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(45deg);
+    left: 150px;
+}
+  
+.css-next-item {
+    border-bottom: 2px solid;
+    border-left: 2px solid;
+    transform: rotate(-135deg);
+    right: 150px;
+}
+/*  */
+
+.css-bg-dark {
+    background-color: #1e1e1f;
+}
+
+.css-text-color {
+    color: #e0463a;
+}
+
+.css-card-component-bg {
+    background-color: #6cc473;
+}
+
+.css-card-btn-color {
+    background-color: #6cc473;
+}
+
+.css-card-title-color {
+    color: #6cc473;
+}
+
+.css-card-text-color {
+    color: #e0463a;
+}
+
+.css-line-height {
+    line-height: 100%;
+}
+
+.css-control-carousel-bg {
+    background-color: #f0f0f0;
+}
+
+/* Styles for Map Component */
+iframe  {
+    height: 220px;
+    width: 100%;
+    border: none;
+}
+/*  */
+
+.css-footer-bg {
+    background-color: #1e1e1f;
+}
+
+.css-icon-bg {
+    background-color: #ec4e4d;
+}
+
+.css-rounded {
+    border-radius: 2px;
+}
+
+/* Styles for Carousel Component with multiple items */
+/* The dots/bullets/indicators */
+.css-dot {
+    cursor: pointer;
+    height: 9px;
+    width: 9px;
+    margin: 0 2px;
+    background-color:gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+  
+.css-dot:hover {
+    background-color: #6cc473;
+}
+
+/* Next & previous buttons */
+.css-prev, .css-next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #6cc473;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+  
+/* Position the "next button" to the right */
+.css-next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a gray background color with a little bit see-through */
+.css-prev:hover, .css-next:hover {
+    color: rgba(0,0,0,0.4);
+    font-size: 28px;
+}
+
+.css-margin {
+    margin-top: 150px;
+}
+/*  */
+
+/* Styles for Table Component */
+.css-table-body {
+    background-color: #f0f0f0 !important;
+}
+
+.css-table-footer {
+    margin-top: 30px;
+}
+
+.css-table-footer-btn {
+    margin-top: 20px;
+}
+
+.css-table-footer-bg {
+    background-color: #616161 !important;
+}
+
+.css-table-footer-danger-bg {
+    background-color: #ec4e4d !important;
+}
+
+.css-top {
+    padding-top: 52.6%;
+}
+
+.css-bottom {
+    padding-bottom: 105%;
+}
+
+.css-text-gray {
+    color: #f0f0f0;
+}
+
+.css-table-icon {
+    position: absolute;
+    margin-top: -25px;
+    margin-left: 40%;
+    border-radius: 4px;
+    color: #eb4f4e;
+    border: none;
+}
+/*  */
