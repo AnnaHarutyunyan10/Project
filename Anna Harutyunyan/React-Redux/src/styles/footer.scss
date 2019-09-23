@@ -1,0 +1,12 @@
+/*footer-top.js*/
+$color_footer_top: #eee;
+$opacity_footer: 0.7;
+
+.my-footer-top-bg {
+	background-color: $color_footer_top;
+}
+
+/*footer-middle.js*/
+.my-footer-hover:hover {
+	opacity: $opacity_footer;
+}

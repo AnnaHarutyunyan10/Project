@@ -1,0 +1,17 @@
+$containerImage_position: relative;
+$containerImage_color: white;
+
+$text_position: absolute;
+$text_top: 20%;
+$text_left: 63%;
+
+.containerImage {
+    position: $containerImage_position;
+    color: $containerImage_color;
+}
+
+#text {
+    position: $text_position;
+    top: $text_top;
+    left: $text_left;
+}

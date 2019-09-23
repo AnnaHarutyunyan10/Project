@@ -1,0 +1,100 @@
+$logo_width: 70px;
+
+$submenu_display: none;
+
+$submenu_display_hover: block;
+
+$submenu_text_decor: none;
+$submenu_padding: 10px;
+
+$my_bg_display: none;
+$my_bg_position: absolute;
+$my_bg_left: 0;
+$my_bg_background_color: #000;
+$my_bg_z_index: 1;
+$my_bg_width: 100%;
+
+$my_menu_bg_hover_background_color: black;
+$my_menu_bg_hover_padding: 10px;
+$my_menu_bg_hover_color: white;
+
+$my_header_menu_item_hover_background_color: green; 
+$my_header_menu_item_hover_padding: 3px 0;
+$my_header_menu_item_hover_text_decoration: none;
+
+$my_bg_for_addCard_page_header_background-color: #eee;
+$border_buttom_width: 3px;
+$border_buttom_color: rgb(218, 215, 215);
+
+
+.logo {
+    width: $logo_width;
+}
+
+.submenu-hide {
+    display: $submenu_display;
+}
+  
+/*.submenu-show:hover .submenu-hide {
+    display: block;
+}*/
+
+.submenu-show {
+	&:hover {
+		.submenu-hide {
+			display: $submenu_display_hover; 
+        }
+    }
+}
+.submenu {
+    text-decoration: $submenu_text_decor;
+    padding: $submenu_padding;
+}
+
+.my-bg {
+    display: $my_bg_display;
+    position: $my_bg_position;
+    left: $my_bg_left;
+    background-color: $my_bg_background_color;
+    z-index: $my_bg_z_index;
+    width: $my_bg_width;
+}
+
+/*.my-menu-bg:hover {
+    background-color: black;
+    padding: 10px;
+    color: white;
+}*/
+
+.my-menu-bg {
+	&:hover {
+		background-color: $my_menu_bg_hover_background_color; 
+		padding: $my_menu_bg_hover_padding; 
+        color: $my_menu_bg_hover_color; 
+        width: 100%;
+    }
+}
+
+/*.my-header-menu-item-hover:hover {
+    background-color: green;
+    padding: 3px 0;
+    text-decoration: none;
+}*/
+
+.my-header-menu-item-hover {
+	&:hover {
+		background-color: $my_header_menu_item_hover_background_color; 
+		padding: $my_header-menu_item_hover_padding; 
+        text-decoration: $my_header_menu_item_hover_text_decoration; 
+    }
+}
+
+/*page_addCard.js  -- for header*/
+
+.my-bg-for-addCard-page-header {
+    background-color: $my_bg_for_addCard_page_header_background-color;
+    border-bottom: $border_buttom_width solid $border_buttom_color; 
+}
+
+
+/***********************************************************************/
