@@ -1,0 +1,34 @@
+.shadow {
+    box-shadow: none;
+}
+
+.header-text {
+    font: Bold 40px/74px Droid Sans;
+    letter-spacing: 1.2px;
+}
+
+.course-header {
+    font: Bold 16px/23px Droid Sans;
+    letter-spacing: 0.54px;
+    margin-top: -7px;
+}
+
+.time {
+    font: normal 13px/16px Droid Sans;
+    letter-spacing: 0.39px;
+}
+
+.information {
+    font: normal 14px/20px Droid Sans;
+    letter-spacing: 0.38px;
+}
+
+.new-btn {
+    margin-top: -60px;
+}
+
+.new-price {
+    font: Bold 40px/69px Droid Sans;
+    letter-spacing: 1.2px;
+    color: #D35135;
+}

@@ -1,0 +1,50 @@
+.my-left {
+    margin-left: 223px;
+}
+
+.courses-header {
+    font: Bold 50px/74px Droid Sans;
+    letter-spacing: 1.5px;
+    color: #292929;
+    padding: 4px 0 4px 0;
+}
+
+.courses-text {
+    font: Regular 16px/25px Droid Sans;
+    letter-spacing: 0.48px;
+    color: #292929;
+    width: 61%;
+    margin: -30px 0 74px 0;
+}
+
+.side-image {
+    margin-top: 78px;
+    width: 100%;
+}
+
+.arrow {
+    cursor: pointer;
+    background-color: #BDD531;
+    color: #fff;
+    border-radius: 3px;
+    padding-top: 3px;
+    text-align: center;
+    float: right;
+    margin-left: 12px;
+    width: 31px;
+    height: 31px;
+}
+
+.arrow:hover {
+    border: 1px solid #BDD531;
+    background: transparent;
+    color: #BDD531;
+}
+
+.arrow-margin {
+    margin-top: -5px;
+}
+
+.btn-margin {
+    margin-top: -37px;
+}

@@ -1,0 +1,19 @@
+.articles-padding {
+    padding: 158px 128px 0 128px;
+}
+
+.text-distance {
+    margin-left: 68px;
+    margin-top: -94px;
+}
+
+.btn-distance {
+    margin: -45px 0 75px 0;
+}
+
+div h1 {
+    text-align: left;
+    font: Bold 50px/42px Droid Sans;
+    letter-spacing: 1.5px;
+    color: #292929;
+}

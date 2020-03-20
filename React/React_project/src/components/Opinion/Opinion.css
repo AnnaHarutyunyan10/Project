@@ -1,0 +1,23 @@
+.name {
+    font: Bold 25px/39px Droid Sans;
+    letter-spacing: 0.75px;
+}
+
+.work {
+    font: normal 14px/25px Droid Sans;
+    letter-spacing: 0.48px;
+}
+
+.description {
+    font: normal 14px/25px Droid Sans;
+    letter-spacing: 0.48px;
+    padding-top: 10px;
+}
+
+.size-content {
+    margin-top: -60px;
+}
+
+.horizontal {
+    box-shadow: none;
+}

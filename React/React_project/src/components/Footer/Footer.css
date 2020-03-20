@@ -1,0 +1,60 @@
+.inline {
+    display: inline;
+}
+
+.center {
+    text-align: center;
+}
+
+.footer-margin {
+    margin-right: 21px;
+}
+
+.footer-header {
+    font: normal 33px/39px Kannada MN;
+    letter-spacing: 1.98px;
+    line-height: 0.5;
+}
+
+.footer-text {
+    font: normal 11px/13px Droid Sans;
+    letter-spacing: 0;
+}
+
+.links {
+    font: normal 16px/19px Droid Sans;
+    letter-spacing: 0.96px;
+}
+
+.fb, .tw, .google, .in, .map, .insta {
+    color: #fff;
+    background-color: #292929;
+    border-radius: 3px;
+    width: 35px;
+    height: 35px;
+    padding-top: 9px;
+}
+
+.fb:hover, .tw:hover, .google:hover, .in:hover, .map:hover, .insta:hover {
+    color: #fff;
+    background-color: #BDD531;
+}
+
+.page-footer {
+    background-color: #333333;
+}
+
+.footer-copyright {
+    background-color: #292929 !important;
+    padding: 0 !important;
+}
+
+.footer-buttom {
+    font: normal 12px/22px Droid Sans;
+    letter-spacing: 0.42px;
+}
+
+.aist-text {
+    color: #FFC400;
+    margin-left: 5px;
+}

@@ -1,0 +1,23 @@
+.headers {
+    text-align: center;
+    font: Bold 50px/42px Droid Sans;
+    letter-spacing: 1.5px;
+    margin: -62px 0 84px 0;
+}
+
+.x-container {
+    padding: 165px 165px 0 165px;
+}
+
+.cards-distance {
+    margin-bottom: 29px;
+}
+
+.left-border {
+    border-left: 1px solid #eee;
+}
+
+.second-col {
+    margin-top: 105px;
+    padding-left: 29px;
+}

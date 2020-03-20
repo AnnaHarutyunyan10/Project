@@ -1,0 +1,51 @@
+.info {
+    opacity: 0;
+}
+
+.my-card:hover .info {
+    position: absolute;
+    opacity: 1;
+    left: 46%;
+    top: 70%;
+    z-index: 1;
+    font-size: 10px;
+}
+
+.my-card {
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+  
+.my-card:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    right: 0px;
+    background: #BDD531;
+    height: 100%;
+    width: 8px;
+    transform: scale(1);
+    transform-origin: 50% 50%;
+    transition: transform 0.25s ease-out;
+    opacity: 0.8;
+}
+
+.my-card:hover:before {
+    transform: scale(18);
+}
+
+.distance {
+    margin-left: 56px;
+}
+
+.card-header {
+    font: Bold 18px/25px Droid Sans;
+    letter-spacing: 0.54px;
+}
+
+.card-body {
+    font: normal 16px/25px Droid Sans;
+    letter-spacing: 0.48px;
+}

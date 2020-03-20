@@ -1,0 +1,56 @@
+nav {
+    background-color: #fff;
+}
+
+nav ul a {
+    text-align: left;
+    font: Regular 16px/19px Droid Sans;
+    letter-spacing: 0.96px;
+    color: #505050;
+    opacity: 1;
+}
+
+nav ul a:hover {
+    text-decoration: underline #BDD531;
+    background-color: #fff;
+}
+
+nav ul a.btn-large {
+    margin-left: 5px !important;
+}
+
+nav ul a.btn-large:hover {
+    text-decoration: none;   
+}
+
+.brand-logo {
+    text-align: left;
+    font: Bold 33px/39px SosNof_U;
+    letter-spacing: 1.98px;
+    color: #000000 !important;
+    opacity: 1;
+}
+
+.btn-large {
+    border-radius: none !important;
+    height: 64px;
+    line-height: 64px;
+}
+
+/*  */
+
+.my-button {
+    background-color: #02BFDB !important;
+    color: black;
+}
+
+.my-button:hover {
+    background-color: #BDD531 !important;
+}
+
+.my-logo {
+    top: 10px;
+    left: 244px;
+    width: 181px;
+    height: 32px;
+}

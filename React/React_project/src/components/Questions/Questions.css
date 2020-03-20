@@ -1,0 +1,36 @@
+.text-style {   
+    font: Bold 18px/25px Droid Sans;
+    letter-spacing: 0.54px;
+    color: #292929;
+    display: flex;
+}
+
+.header {
+    padding-bottom: 42px;
+    padding-left: 15px;
+}
+
+.add {
+    padding: 5px 9px 5px 9px;
+    border: 1px solid #BDD531;
+    color: #BDD531;
+}
+
+.add:hover {
+    background-color: #BDD531;
+    color: #fff;
+}
+
+.container-left {
+    padding-left: 300px;
+}
+
+.table-size {
+    width: 50%;
+}
+
+.img-style {
+    width: 100%;
+    z-index: 1;
+    margin-top: -135px;
+}
