@@ -1,60 +1,68 @@
 const express = require('express');
 const app = express();
-const { Sequelize, DataTypes } = require('sequelize');
+const bodyParser = require('body-parser')
+const models = require('./models');
+const controllers = require('./controllers');
 const config = require('./config');
-const peoples = require('./json/people.json');
-const inv = require('./json/investments.json');
+// const peoples = require('./json/people.json');
 
-const { host_name, db_name, db_user, db_password } = config;
+const { Users, Cities, Office } = models;
+const {
+    getAllUsers,
+    getCities,
+    getUserById,
+    getOffices,
+    addUser,
+    addCity,
+    addOffice
+} = controllers;
 
-const sequelize = new Sequelize(db_name, db_user, db_password, {
-    host: host_name,
-    dialect: 'mysql'
-});
-
-// create table users
-const Users = sequelize.define('users', {
-    id: {
-        type: DataTypes.UUID,
-        primaryKey: true,
-        unique: true
-    },
-    name: {
-        type: DataTypes.STRING,
-        allowNull: false,
-    },
-    lastName: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    job: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
-    imageUrl: {
-        type: DataTypes.STRING,
-        allowNull: false
-    }
-}, {});
-
-// create table investments
-const Investments = sequelize.define('investments', {
-    id: {
-        type: DataTypes.UUID,
-        primaryKey: true,
-        unique: true
-    },
-    investments: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-}, {});
+app.use(bodyParser.json());
 
 const connect = async () => {
     try {
-        await sequelize.authenticate();
         await Users.sync();
-        await Investments.sync();
+        await Cities.sync();
+        await Office.sync();
+
+        // // insert into cities
+        // await Cities.create({
+        //     name: 'Vanadzor',
+        //     isCapital: false,
+        //     population: 80000
+        // });
+        // await Cities.create({
+        //     name: 'Gyumri',
+        //     isCapital: false,
+        //     population: 115000
+        // });
+        // await Cities.create({
+        //     name: 'Erevan',
+        //     isCapital: true,
+        //     population: 1000000
+        // });
+        // await Cities.create({
+        //     name: 'Aparan',
+        //     isCapital: false,
+        //     population: 32000
+        // });
+
+        // // insert into offices
+        // await Office.create({
+        //     name: 'IBM'
+        // });
+        // await Office.create({
+        //     name: 'MICROSOFT'
+        // });
+        // await Office.create({
+        //     name: 'ORACLE'
+        // });
+
+        // // insert into users
+        // for (let i = 0; i < peoples.peoplesData.length; ++i) {
+        //     await Users.create(peoples.peoplesData[i]);
+        // }
+
         console.log('Connection has been established successfully.');
     } catch (error) {
         console.error('Unable to connect to the database:', error);
@@ -63,82 +71,12 @@ const connect = async () => {
 
 connect();
 
-async function createUsersTable() {
-    for(var i = 0; i < peoples.peoplesData.length; ++i) {
-        await Users.create({
-            id: peoples.peoplesData[i].id, 
-            name: peoples.peoplesData[i].name,
-            lastName: peoples.peoplesData[i].lastName,
-            job: peoples.peoplesData[i].job,
-            imageUrl: peoples.peoplesData[i].photo,
-        });
-    }
-};
-// createUsersTable();
-
-async function createInvestmentsTable() {
-    for(var i = 0; i < inv.investmentsData.length; ++i) {
-        await Investments.create({
-            id: inv.investmentsData[i].id, 
-            investments: inv.investmentsData[i].investments,
-        });
-    }
-};
-// createInvestmentsTable();
-
-// find all users 
-const getAllUsers = async (req, res) => {
-    const allUser = await Users.findAll();
-
-    if (allUser) {
-        res.send(allUser);
-    } else {
-        res.statusCode = 404;
-        res.send('Not Found');
-    }
-};
-
-// get all investments 
-const getInvestments = async (req, res) => {
-    const allInvestments = await Investments.findAll();
-
-    if (allInvestments) {
-        res.send(allInvestments);
-    } else {
-        res.statusCode = 404;
-        res.send('Not Found');
-    }
-};
-
-// get user by id
-const getUserById = async (req, res) => {
-    const id = req.params.id;
-    const userById = await Users.findByPk(id);
-
-    if (userById) {
-        res.send(userById);
-    } else {
-        res.statusCode = 404;
-        res.send('Not Found');
-    }
-};
-
-// get user by id
-const getInvestmentsById = async (req, res) => {
-    const id = req.params.id;
-    const invById = await Investments.findByPk(id);
-
-    if (invById) {
-        res.send(invById);
-    } else {
-        res.statusCode = 404;
-        res.send('Not Found');
-    }
-};
-
 app.get('/users', getAllUsers);
-app.get('/investments', getInvestments);
 app.get('/users/:id', getUserById);
-app.get('/investments/:id', getInvestmentsById);
+app.get('/cities', getCities);
+app.get('/offices', getOffices);
+app.post('/adduser', addUser);
+app.post('/addcity', addCity);
+app.post('/addoffice', addOffice);
  
-app.listen(3000, () => console.log('connection ...'))
+app.listen(config.port, () => console.log('connection ...'))
